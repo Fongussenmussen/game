@@ -1,0 +1,188 @@
+@import 'reset.css';
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Regular.eot");
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Bold.eot");
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Semibold.eot");
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url("../fonts/Gilroy-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overwave";
+  src: url("../fonts/Overwave-AL6AL.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Gilroy", sans-serif;
+  margin: 0;
+}
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.header {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(207, 231, 250);
+  /* Old browsers */
+  background: -moz-linear-gradient(top, rgb(207, 231, 250) 0%, rgb(99, 147, 193) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgb(207, 231, 250) 0%, rgb(99, 147, 193) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(207, 231, 250) 0%, rgb(99, 147, 193) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.header__start-button {
+  display: flex;
+  justify-content: center;
+}
+.header button {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 22px;
+  font-weight: 600;
+  background: #1CD2A1;
+  cursor: pointer;
+}
+.header button:hover {
+  background: #871CD2;
+  transition: 0.5s ease;
+  color: #fff;
+}
+.header__heading {
+  font-size: 36px;
+  font-family: "Overwave", sans-serif;
+  animation: tremble 3s infinite;
+}
+.header__heading:hover {
+  animation: tremble 0.1s infinite;
+  cursor: pointer;
+}
+.header__description {
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  height: calc(100vh - 110px);
+  background: url("../img/vinnytsa.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: #000;
+  cursor: crosshair;
+}
+.main #square {
+  display: none;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+  cursor: crosshair;
+  border: solid 5px #fff;
+}
+.main #square img {
+  border-radius: 50%;
+}
+
+.secret-img {
+  position: absolute;
+  display: none;
+  top: 35%;
+  left: 40%;
+  bottom: 40%;
+  right: 40%;
+}
+
+.glow {
+  display: block;
+  animation: secretImg 2s ease-in-out infinite alternate;
+  -webkit-animation: secretImg 2s ease-in-out infinite alternate;
+}
+
+@keyframes secretImg {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+@-webkit-keyframes secretImg {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+@keyframes tremble {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes tremble {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translate(0);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
